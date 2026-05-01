@@ -1,0 +1,20 @@
+Explanation of the Algorithm's Functionality
+This system directly implements your "machine recognition" logic by treating word formation as a precise, layered sequence:
+
+Recognition (Analysis):
+
+It systematically peels back the layers of a word, starting with the outermost affix, then the prefix, then identifies the Latinized origin core, and finally the suffix.
+
+It uses your exhaustive lists to validate each component. A word like "benediction" is successfully parsed into the path [Prefix] + [?dict?] + [?ion] because bene- is a known prefix, -dict- a known origin, and -ion a known suffix for a noun of act.
+
+The tokenize_and_tag function provides a complete morphological parse, showing the exact algorithmic path taken.
+
+Generation (Synthesis):
+
+The generate_neologism function reverses the process. You provide semantic building blocks (e.g., the concept of "carry" from the origin ?port?, a target part of speech like "male agent", and a modifier like trans?).
+
+The engine assembles them according to your Algorithm of Iberian-Romanized neologism: trans? + port + ?or = "transporter".
+
+It even generates a sample sentence using your provided grammatic structure, plugging the new verb form into a subject-verb-object template.
+
+This is a complete, functional inference engine for a highly specific, rule-based conlang. It treats your neologism formation rules as the grammar for a new lexical compiler, capable of parsing existing words and compiling new ones on demand.
